@@ -29,15 +29,15 @@ $("#sms_submit,#whatsapp_submit").click(function(event) {
         event.preventDefault();
         if (this.id == 'sms_submit') {
           if (rsvpTo == 'Ruan') {
-            window.open("sms:+27825564267&body=RSVP: "+nameRSVP+", "+attendanceRSVP);
+            window.open("sms:+27825564267?body=RSVP:%20"+nameRSVP+",%20"+attendanceRSVP);
           } else {
-            window.open("sms:+27783104029&body=RSVP: "+nameRSVP+", "+attendanceRSVP);
+            window.open("sms:+27783104029?body=RSVP:%20"+nameRSVP+",%20"+attendanceRSVP);
           }
         } else {
           if (rsvpTo == 'Ruan') {
-            window.open("https://wa.me/+27825564267?text=RSVP: "+nameRSVP+", "+attendanceRSVP);
+            window.open("https://wa.me/+27825564267?text=RSVP:%20"+nameRSVP+",%20"+attendanceRSVP);
           } else {
-            window.open("https://wa.me/+27783104029?text=RSVP: "+nameRSVP+", "+attendanceRSVP);
+            window.open("https://wa.me/+27783104029?text=RSVP:%20"+nameRSVP+",%20"+attendanceRSVP);
           }
         }
       } else {
