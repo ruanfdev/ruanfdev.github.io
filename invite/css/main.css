@@ -75,6 +75,11 @@ button#whatsapp_submit:hover {
   border-radius: 10px 0px 10px 0px;
   padding: 10px 15px;
 }
+.home_con.container {
+  background-color: rgb(0 0 0 / 25%);
+  border-radius: 15px;
+  padding: 30px 15px;
+}
 /* Home Page Style */
 .ww-home-page {
   background: url("../images/home-img-rd.jpg") no-repeat center center;

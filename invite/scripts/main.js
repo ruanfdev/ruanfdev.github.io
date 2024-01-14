@@ -5,6 +5,33 @@ $(document).ready(function() {
     // uncomment below for on-scroll animations to played only once
     // once: true
   }); // initialize animate on scroll library
+
+  // Set the date we're counting down to
+  var countDownDate = new Date("Mar 9, 2024 16:00:00").getTime();
+
+  // Update the count down every 1 second
+  var countdown = setInterval(function() {
+    // Get today's date and time
+    var nowDate = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distanceDate = countDownDate - nowDate;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var daysDate = Math.floor(distanceDate / (1000 * 60 * 60 * 24));
+    var hoursDate = Math.floor((distanceDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutesDate = Math.floor((distanceDate % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsDate = Math.floor((distanceDate % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="countdown_time"
+    document.getElementById("countdown_time").innerHTML = '"' + daysDate + "d " + hoursDate + "h " + minutesDate + "m " + secondsDate + "s" + '"';
+      
+    // If the count down is over, write some text 
+    if (distanceDate < 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown_time").innerHTML = '"MARRIED!"';
+    }
+  }, 1000);
 });
 
 $("#sms_submit,#whatsapp_submit").click(function(event) {
