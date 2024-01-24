@@ -8,9 +8,12 @@ body {
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    background-color: #404040;
+    color: #F2F2F2;
+    text-align: center;
 }
 header {
-    background-color: #f2f2f2;
+    background-color: #303030;
     padding: 1%;
     width: 98%;
     position: fixed;
@@ -25,7 +28,7 @@ main {
     margin: 0 auto;
 }
 footer {
-    background-color: #f2f2f2;
+    background-color: #333333;
     padding: 1%;
     width: 98%;
     position: fixed;
