@@ -11,6 +11,7 @@ body {
     background-color: #404040;
     color: #F2F2F2;
     text-align: center;
+    overflow: hidden;
 }
 header {
     background-color: #303030;
@@ -23,8 +24,8 @@ header {
     text-align: center;
 }
 main {
-    padding: 20px;
-    max-width: 1200px;
+    padding: 0;
+    max-width: 100%;
     margin: 0 auto;
 }
 footer {
@@ -44,4 +45,9 @@ h1 {
 p {
     font-size: 16px;
     line-height: 1.5;
+}
+iframe {
+    width: 100vw;
+    height: 100vh;
+    border: none;
 }
