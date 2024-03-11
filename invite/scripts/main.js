@@ -1,1 +1,54 @@
-$(document).ready(function(){AOS.init({});var t=new Date("Mar 9, 2024 16:00:00").getTime(),e=setInterval(function(){var n=new Date().getTime(),l=t-n;document.getElementById("countdown_time").innerHTML='"'+Math.floor(l/864e5)+"d "+Math.floor(l%864e5/36e5)+"h "+Math.floor(l%36e5/6e4)+"m "+Math.floor(l%6e4/1e3)+'s"',l<0&&(clearInterval(e),document.getElementById("countdown_time").innerHTML='"MARRIED!"')},1e3)}),$("#sms_submit,#whatsapp_submit").click(function(t){var e="",n="",l="";""!=$("#name-input").val()?(e=$("#name-input").val(),$('label[for="name-input"]').html("Name *"),$('label[for="name-input"]').css("color","#FFFFFF"),""!=$("#guest-input").val()?(n=$("#guest-input").val(),$('label[for="guest-input"]').html("Attendance *"),$('label[for="guest-input"]').css("color","#FFFFFF"),""!=$("#rsvp-input").val()?(l=$("#rsvp-input").val(),$('label[for="rsvp-input"]').html("RSVP to *"),$('label[for="rsvp-input"]').css("color","#FFFFFF"),t.preventDefault(),"sms_submit"==this.id?"Ruan"==l?window.open("sms:+27825564267?body=RSVP:%20"+e+",%20"+n):window.open("sms:+27783104029?body=RSVP:%20"+e+",%20"+n):"Ruan"==l?window.open("https://wa.me/+27825564267?text=RSVP:%20"+e+",%20"+n):window.open("https://wa.me/+27783104029?text=RSVP:%20"+e+",%20"+n)):($("#rsvp-input").select(),$('label[for="rsvp-input"]').html("RSVP to required *"),$('label[for="rsvp-input"]').css("color","red"))):($("#guest-input").select(),$('label[for="guest-input"]').html("Attendance required *"),$('label[for="guest-input"]').css("color","red"))):($("#name-input").select(),$('label[for="name-input"]').html("Name required *"),$('label[for="name-input"]').css("color","red"))}),$("a.smooth-scroll").click(function(t){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var e=$(this.hash);(e=e.length?e:$("[name="+this.hash.slice(1)+"]")).length&&(t.preventDefault(),$("html, body").animate({scrollTop:e.offset().top},1e3,function(){var t=$(e);if(t.focus(),t.is(":focus"))return!1;t.attr("tabindex","-1"),t.focus()}))}});var activeFilter="all";function filterItems(t){t!==activeFilter&&(activeFilter=t,$(".ww-gallery .card").each(function(){var e=$(this),n=e.data("groups"),l=!1;if("all"===t)l=!0;else for(var a=0;a<n.length;a++)n[a]===t&&(l=!0);e.fadeOut(400),setTimeout(function(){l&&!e.is(":visible")&&e.fadeIn(400)},500)}))}$(".ww-filter-button").on("click",function(t){$(".ww-filter-button").removeClass("btn-primary"),$(".ww-filter-button").addClass("btn-outline-primary");var e=$(this);e.removeClass("btn-outline-primary"),e.addClass("btn-primary"),filterItems(e.data("filter")),t.preventDefault()}),$(document).on("click",'[data-toggle="lightbox"]',function(t){t.preventDefault(),$(this).ekkoLightbox()});
+$(document).ready(function () {
+	AOS.init({});
+}),
+	$('a#album_photos').click(function (t) {
+		window.open('https://photos.app.goo.gl/Z7wHCHeupXanPSJdA', '_blank');
+	}),
+	$('a.smooth-scroll').click(function (t) {
+		if (
+			location.pathname.replace(/^\//, '') ==
+				this.pathname.replace(/^\//, '') &&
+			location.hostname == this.hostname
+		) {
+			var e = $(this.hash);
+			(e = e.length ? e : $('[name=' + this.hash.slice(1) + ']')).length &&
+				(t.preventDefault(),
+				$('html, body').animate(
+					{ scrollTop: e.offset().top },
+					1e3,
+					function () {
+						var t = $(e);
+						if ((t.focus(), t.is(':focus'))) return !1;
+						t.attr('tabindex', '-1'), t.focus();
+					}
+				));
+		}
+	});
+var activeFilter = 'all';
+function filterItems(t) {
+	t !== activeFilter &&
+		((activeFilter = t),
+		$('.ww-gallery .card').each(function () {
+			var e = $(this),
+				n = e.data('groups'),
+				l = !1;
+			if ('all' === t) l = !0;
+			else for (var a = 0; a < n.length; a++) n[a] === t && (l = !0);
+			e.fadeOut(400),
+				setTimeout(function () {
+					l && !e.is(':visible') && e.fadeIn(400);
+				}, 500);
+		}));
+}
+$('.ww-filter-button').on('click', function (t) {
+	$('.ww-filter-button').removeClass('btn-primary'),
+		$('.ww-filter-button').addClass('btn-outline-primary');
+	var e = $(this);
+	e.removeClass('btn-outline-primary'),
+		e.addClass('btn-primary'),
+		filterItems(e.data('filter')),
+		t.preventDefault();
+}),
+	$(document).on('click', '[data-toggle="lightbox"]', function (t) {
+		t.preventDefault(), $(this).ekkoLightbox();
+	});
