@@ -58,8 +58,11 @@
 		width: 100%;
 	}
 }
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
 body {
-	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
 	height: 100vh;
@@ -131,6 +134,7 @@ p {
 	line-height: 1.5em;
 }
 a {
+	font-weight: 500;
 	color: var(--blue-text);
 	text-decoration: none;
 	border-radius: 4px;
