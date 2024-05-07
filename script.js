@@ -1,1 +1,3 @@
-const d=new Date;let year=d.getFullYear();document.getElementById("copyright").innerHTML="&copy; 2012-"+year+" ";
+const d = new Date();
+let year = d.getFullYear();
+document.getElementById('copyright').innerHTML = '&copy; 2010-' + year + ' ';
