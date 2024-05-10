@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg: #131314;
+  --bg-accent: #1b1b1b;
+  --text: #f6f6f6;
+  --text-accent: #d6d6d6;
+  --blue-bg: #282a2c;
+  --blue-text: #c2e7ff;
+  --green-bg: #262d26;
+  --green-text: #ceead6;
+  --red-bg: #312d2d;
+  --red-text: #e05f54;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131314;
+    --bg-accent: #1b1b1b;
+    --text: #f6f6f6;
+    --text-accent: #d6d6d6;
+    --blue-bg: #282a2c;
+    --blue-text: #c2e7ff;
+    --green-bg: #262d26;
+    --green-text: #ceead6;
+    --red-bg: #312d2d;
+    --red-text: #e05f54;
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --bg-accent: #f6f6f6;
+    --text: #1b1b1b;
+    --text-accent: #303030;
+    --blue-bg: #e8f0fe;
+    --blue-text: #1967d2;
+    --green-bg: #ceead6;
+    --green-text: #188038;
+    --red-bg: #fce8e6;
+    --red-text: #ea4335;
+  }
+}
+@keyframes displayText {
+  0% {
+    display: inline-block;
+  }
+  25%,
+  100% {
+    display: none;
+  }
+}
+@keyframes animateText {
+  0%,
+  10%,
+  100% {
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--bg);
+  color: var(--text);
+}
+p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+a {
+  font-weight: 500;
+  color: var(--blue-text);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.15s linear;
+}
+a:hover {
+  color: var(--green-text);
+}
