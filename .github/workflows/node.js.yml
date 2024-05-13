@@ -30,6 +30,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAGES_DEPLOY_TOKEN }}
-          publish_dir: ./dist/ruanfdev.github.io
+          publish_dir: ./dist/ruanfdev.github.io/browser
           publish_branch: master
           force_orphan: true
