@@ -38,6 +38,7 @@ h1#typing_intro span::before {
   width: 100%;
   overflow: hidden;
   color: var(--green-text);
+  /* background: var(--green-bg); */
   border-right: 3px solid var(--red-text);
   filter: drop-shadow(0 0 3px var(--blue-text));
   animation: animateText 3s linear infinite;
