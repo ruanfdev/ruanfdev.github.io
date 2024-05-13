@@ -1,0 +1,45 @@
+main {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  background-color: var(--bg-accent);
+  width: 100%;
+  height: clamp(100px, 12%, 120px);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+h1#typing_intro {
+  font-size: clamp(5vw, 5.5em, 14vw);
+  margin: 0;
+  padding: 0 5%;
+}
+h1#typing_intro span {
+  position: relative;
+  color: var(--bg-accent);
+  animation: displayText 12s infinite;
+  animation-delay: calc(-3s * var(--i));
+}
+h1#typing_intro span::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: var(--green-text);
+  /* background: var(--green-bg); */
+  border-right: 3px solid var(--red-text);
+  filter: drop-shadow(0 0 3px var(--blue-text));
+  animation: animateText 3s linear infinite;
+}
