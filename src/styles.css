@@ -10,8 +10,8 @@
   --red-bg: #312d2d;
   --red-text: #e05f54;
 
-  --linkedin-color: var(--text);
-  --github-color: var(--text);
+  --linkedin-color: #0a66c2;
+  --github-color: #181717;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -25,9 +25,6 @@
     --green-text: #ceead6;
     --red-bg: #312d2d;
     --red-text: #e05f54;
-
-    --linkedin-color: var(--text);
-    --github-color: var(--text);
   }
 }
 @media (prefers-color-scheme: light) {
@@ -42,9 +39,6 @@
     --green-text: #188038;
     --red-bg: #fce8e6;
     --red-text: #ea4335;
-
-    --linkedin-color: #0a66c2;
-    --github-color: #181717;
   }
 }
 @keyframes displayText {

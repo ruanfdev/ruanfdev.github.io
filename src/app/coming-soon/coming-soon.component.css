@@ -34,17 +34,18 @@ footer {
   justify-content: center;
   align-items: center;
 }
-a.link-LinkedIn,
-a.link-GitHub {
+a[class*="link-"] {
   height: 100%;
 }
-svg.svg-LinkedIn {
+svg[class*="svg-"] {
+  transition: inherit;
   height: 100%;
-  fill: var(--linkedin-color);
+  fill: var(--blue-text);
+  transform: scale(0.95);
 }
-svg.svg-GitHub {
-  height: 100%;
-  fill: var(--github-color);
+a[class*="link-"]:hover svg[class*="svg-"] {
+  fill: var(--green-text);
+  transform: scale(1);
 }
 h1#typing_intro {
   font-size: clamp(5vw, 5.5em, 14vw);
