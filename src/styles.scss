@@ -1,43 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root {
-    // Base Colors
-    $bg: #131314;
-    $bg-accent: #1b1b1b;
-    $text: #f6f6f6;
-    $text-accent: #d6d6d6;
-    $text-faded: #181818;
+$bg: #131314;
+$bg-accent: #1b1b1b;
+$text: #f6f6f6;
+$text-accent: #d6d6d6;
+$text-faded: #181818;
 
-    // Theme Colors
-    $blue-bg: #282a2c;
-    $blue-text: #c2e7ff;
-    $green-bg: #262d26;
-    $green-text: #ceead6;
-    $red-bg: #312d2d;
-    $red-text: #e05f54;
+$blue-bg: #282a2c;
+$blue-text: #c2e7ff;
+$green-bg: #262d26;
+$green-text: #ceead6;
+$red-bg: #312d2d;
+$red-text: #e05f54;
 
-    // Special Colors
-    $hacker-text: #d6d6d6;
-    $hacker-text-shadow: #00ff00;
-    $linkedin-color: #0a66c2;
-    $github-color: #181717;
+$hacker-text: #d6d6d6;
+$hacker-text-shadow: #00ff00;
+$linkedin-color: #0a66c2;
+$github-color: #181717;
 
-    @media (prefers-color-scheme: light) {
-        // Base Colors
-        $bg: #ffffff;
-        $bg-accent: #f6f6f6;
-        $text: #1b1b1b;
-        $text-accent: #303030;
-        $text-faded: #f5f5f5;
+@mixin light-theme {
+    $bg: #ffffff;
+    $bg-accent: #f6f6f6;
+    $text: #1b1b1b;
+    $text-accent: #303030;
+    $text-faded: #f5f5f5;
 
-        // Theme Colors
-        $blue-bg: #e8f0fe;
-        $blue-text: #1967d2;
-        $green-bg: #ceead6;
-        $green-text: #188038;
-        $red-bg: #fce8e6;
-        $red-text: #ea4335;
-    }
+    $blue-bg: #e8f0fe;
+    $blue-text: #1967d2;
+    $green-bg: #ceead6;
+    $green-text: #188038;
+    $red-bg: #fce8e6;
+    $red-text: #ea4335;
+}
+
+@media (prefers-color-scheme: light) {
+    @include light-theme;
+}
+
+@mixin base-font {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
 @keyframes displayText {
@@ -66,8 +68,7 @@
 }
 
 * {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    @include base-font;
 }
 
 body,
