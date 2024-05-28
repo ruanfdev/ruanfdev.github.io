@@ -1,53 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --bg: #131314;
-    --bg-accent: #1b1b1b;
-    --text: #f6f6f6;
-    --text-accent: #d6d6d6;
-    --text-faded: #181818;
-    --blue-bg: #282a2c;
-    --blue-text: #c2e7ff;
-    --green-bg: #262d26;
-    --green-text: #ceead6;
-    --red-bg: #312d2d;
-    --red-text: #e05f54;
+    // Base Colors
+    $bg: #131314;
+    $bg-accent: #1b1b1b;
+    $text: #f6f6f6;
+    $text-accent: #d6d6d6;
+    $text-faded: #181818;
 
-    --hacker-text: #d6d6d6;
-    --hacker-text-shadow: #00ff00;
-    --linkedin-color: #0a66c2;
-    --github-color: #181717;
-}
+    // Theme Colors
+    $blue-bg: #282a2c;
+    $blue-text: #c2e7ff;
+    $green-bg: #262d26;
+    $green-text: #ceead6;
+    $red-bg: #312d2d;
+    $red-text: #e05f54;
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #131314;
-        --bg-accent: #1b1b1b;
-        --text: #f6f6f6;
-        --text-accent: #d6d6d6;
-        --text-faded: #181818;
-        --blue-bg: #282a2c;
-        --blue-text: #c2e7ff;
-        --green-bg: #262d26;
-        --green-text: #ceead6;
-        --red-bg: #312d2d;
-        --red-text: #e05f54;
-    }
-}
+    // Special Colors
+    $hacker-text: #d6d6d6;
+    $hacker-text-shadow: #00ff00;
+    $linkedin-color: #0a66c2;
+    $github-color: #181717;
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --bg: #ffffff;
-        --bg-accent: #f6f6f6;
-        --text: #1b1b1b;
-        --text-accent: #303030;
-        --text-faded: #f5f5f5;
-        --blue-bg: #e8f0fe;
-        --blue-text: #1967d2;
-        --green-bg: #ceead6;
-        --green-text: #188038;
-        --red-bg: #fce8e6;
-        --red-text: #ea4335;
+    @media (prefers-color-scheme: light) {
+        // Light Theme Overrides
+        $bg: #ffffff;
+        $bg-accent: #f6f6f6;
+        $text: #1b1b1b;
+        $text-accent: #303030;
+        $text-faded: #f5f5f5;
+        $blue-bg: #e8f0fe;
+        $blue-text: #1967d2;
+        $green-bg: #ceead6;
+        $green-text: #188038;
+        $red-bg: #fce8e6;
+        $red-text: #ea4335;
     }
 }
 
@@ -93,15 +80,12 @@ app-coming-soon {
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    background: var(--bg);
-    color: var(--text);
+    background: $bg;
+    color: $text;
 }
 
 app-coming-soon {
-    background-image: linear-gradient(to right,
-            var(--bg-accent) 1px,
-            transparent 1px),
-        linear-gradient(to bottom, var(--bg-accent) 1px, transparent 1px);
+    background-image: linear-gradient(to right, $bg-accent 1px, transparent 1px), linear-gradient(to bottom, $bg-accent 1px, transparent 1px);
     background-size: 4vh 4vh;
     text-align: center;
     overflow: hidden;
@@ -114,12 +98,12 @@ p {
 
 a {
     font-weight: 500;
-    color: var(--blue-text);
+    color: $blue-text;
     text-decoration: none;
     border-radius: 4px;
     transition: all 0.15s linear;
-}
 
-a:hover {
-    color: var(--green-text);
+    &:hover {
+        color: $green-text;
+    }
 }
