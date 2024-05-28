@@ -25,10 +25,10 @@
             position: relative;
             width: 4vh;
             height: 4vh;
-            font-size: 1.55em;
-            font-weight: 900;
+            font-size: 1.5em;
+            font-weight: 500; //900
             color: $text-faded;
-            line-height: 1.25em;
+            line-height: calc(1.05 * 4vh);
             transition: 1s;
             user-select: none;
             z-index: 1;
