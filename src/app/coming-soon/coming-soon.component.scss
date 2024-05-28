@@ -83,6 +83,7 @@ main {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
 
 a[class*="link-"] {
