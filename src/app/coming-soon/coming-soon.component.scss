@@ -8,7 +8,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     overflow: hidden;
 
@@ -23,12 +23,12 @@
 
         span {
             position: relative;
-            width: 4vh;
-            height: 4vh;
+            width: 4dvh;
+            height: 4dvh;
             font-size: 1.5em;
             font-weight: 500; //900
             color: $text-faded;
-            line-height: calc(1.05 * 4vh);
+            line-height: calc(1.05 * 4dvh);
             transition: 1s;
             user-select: none;
             z-index: 1;
@@ -60,8 +60,8 @@ footer {
 }
 
 header {
-    padding: clamp(5px, 1vh, 10px) 0;
-    height: clamp(40px, 5vh, 60px);
+    padding: clamp(5px, 1dvh, 10px) 0;
+    height: clamp(40px, 5dvh, 60px);
     gap: 1em;
 }
 

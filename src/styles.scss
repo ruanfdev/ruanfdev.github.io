@@ -74,7 +74,7 @@ app-root,
 app-coming-soon {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -87,7 +87,7 @@ app-coming-soon {
 
 app-coming-soon {
     background-image: linear-gradient(to right, $bg-accent 1px, transparent 1px), linear-gradient(to bottom, $bg-accent 1px, transparent 1px);
-    background-size: 4vh 4vh;
+    background-size: 4dvh 4dvh;
     text-align: center;
     overflow: hidden;
 }
