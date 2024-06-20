@@ -40,6 +40,7 @@
                     0 0 40px $hacker-text-shadow, 0 0 80px $hacker-text-shadow,
                     0 0 160px $hacker-text-shadow;
                 z-index: 2;
+                font-size: 1.9em;
             }
         }
     }
@@ -123,7 +124,7 @@ h1#typing_intro {
             overflow: hidden;
             color: $green-text;
             // background: $green-bg;
-            border-right: 3px solid $red-text;
+            border-right: 3px solid $blue-text;
             filter: drop-shadow(0 0 3px $blue-text);
             animation: animateText 3s linear infinite;
         }
