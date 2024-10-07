@@ -88,13 +88,13 @@ main {
 }
 
 a[class*="link-"] {
-	height: 100%;
+	height: 85%;
 
 	svg[class*="svg-"] {
 		transition: inherit;
 		height: 100%;
 		fill: $blue-text;
-		transform: scale(0.95);
+		transform: scale(0.9);
 	}
 
 	&:hover svg[class*="svg-"] {
@@ -105,25 +105,32 @@ a[class*="link-"] {
 
 h1#typing_intro {
 	font-size: clamp(5vw, 5.5em, 14vw);
-	margin: 0;
-	padding: 0 5%;
+    margin: 0;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 
 	span {
-		position: relative;
+		position: absolute;
 		cursor: default;
 		color: $bg-accent;
 		animation: displayText 12s infinite;
 		animation-delay: calc(-3s * var(--i));
+		opacity: 0;
+        z-index: -1;
 
 		&::before {
 			content: attr(data-text);
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
+			width: 0;
 			overflow: hidden;
 			color: $green-text;
-			// background: $green-bg;
+			/* background: $green-bg; */
 			border-right: 3px solid $blue-text;
 			filter: drop-shadow(0 0 3px $blue-text);
 			animation: animateText 3s linear infinite;
