@@ -29,19 +29,24 @@
 			font-weight: 500; //900
 			color: $text-faded;
 			line-height: calc(1.05 * 4dvh);
-			transition: 1s;
+			transition: 1.15s;
 			user-select: none;
 			z-index: 1;
 
-			&:hover {
-				color: $hacker-text;
-				transition: 0.15s;
-				text-shadow: 0 0 10px $hacker-text-shadow, 0 0 20px $hacker-text-shadow,
-					0 0 40px $hacker-text-shadow, 0 0 80px $hacker-text-shadow,
-					0 0 160px $hacker-text-shadow;
-				z-index: 2;
-				font-size: 1.9em;
-			}
+			&.active {
+                color: $hacker-text;
+                transition: 0.15s;
+                text-shadow: 0 0 10px $hacker-text-shadow, 0 0 20px $hacker-text-shadow,
+                0 0 40px $hacker-text-shadow, 0 0 80px $hacker-text-shadow,
+                0 0 160px $hacker-text-shadow;
+                z-index: 2;
+                font-size: 2em;
+                transform: rotate3d(0, 0, 1, 3600deg);
+            }
+
+            &:hover {
+                @extend .active;
+            }
 		}
 	}
 }
